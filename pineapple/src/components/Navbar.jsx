@@ -2,7 +2,7 @@ import { ShoppingCartIcon } from "@phosphor-icons/react";
 import { Menu } from "lucide-react";
 import React from "react";
 
-export default function Navbar() {
+export default function Navbar({ setOpen }) {
   return (
     <div>
       <div className="flex justify-between p-4">
@@ -10,7 +10,9 @@ export default function Navbar() {
         <div className="text-[20px] font-bold ">
           Pineapple <span className="text-[#ffd900] ">Juice</span>
         </div>
-        <ShoppingCartIcon size={28} />
+        <div onClick={() => setOpen(true)}>
+          <ShoppingCartIcon size={28} />
+        </div>
       </div>
 
       <div>

@@ -1,8 +1,21 @@
 import React from "react";
 import goldPineapple from "../assets/product-page/goldPineapple.png";
 import { ArrowLeft, StarIcon } from "lucide-react";
+import CheckoutButtons from "../components/CheckoutButtons";
+import { useCart } from "../components/CartContext";
 
 export default function ProductPage() {
+  const { quantity, addProduct, cart } = useCart();
+
+  const product = {
+    id: 1,
+    name: "tapache",
+    image: goldPineapple,
+    quantity: quantity,
+    price: 4.99,
+  };
+
+  console.log(cart);
   return (
     <div>
       <div className="relative">
@@ -25,9 +38,12 @@ export default function ProductPage() {
           Golden Pineapple <br /> Nectar
         </h3>
       </div>
-      <div className="flex items-center gap-2 ml-4 mt-2">
-        <span className="text-[24px] font-semibold ">$4.99</span>
-        <span className="text-[14px] opacity-50">per bottle</span>
+      <div className="flex items-center gap-8 ">
+        <div className="flex items-center gap-2 ml-4 mt-2">
+          <span className="text-[24px] font-semibold ">$4.99</span>
+        </div>
+
+        <CheckoutButtons onClick={() => addProduct(product)} />
       </div>
 
       <p className="mx-4 text-[14px] mt-6">
