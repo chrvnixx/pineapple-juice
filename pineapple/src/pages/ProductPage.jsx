@@ -3,9 +3,11 @@ import goldPineapple from "../assets/product-page/goldPineapple.png";
 import { ArrowLeft, StarIcon } from "lucide-react";
 import CheckoutButtons from "../components/CheckoutButtons";
 import { useCart } from "../components/CartContext";
+import { useNavigate } from "react-router";
 
 export default function ProductPage() {
   const { quantity, addProduct, cart } = useCart();
+  const navigate = useNavigate();
 
   const product = {
     id: 1,
@@ -20,7 +22,10 @@ export default function ProductPage() {
     <div>
       <div className="relative">
         <img src={goldPineapple} alt="" />
-        <div className="bg-[#ffd900]/80 absolute top-4 left-4 p-2 rounded-full">
+        <div
+          onClick={() => navigate(-1)}
+          className="bg-[#ffd900]/80 absolute top-4 left-4 p-2 rounded-full"
+        >
           <ArrowLeft />
         </div>
       </div>

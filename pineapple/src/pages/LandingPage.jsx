@@ -4,8 +4,10 @@ import pineapple from "../assets/landing-page/pineapple.png";
 import Card1 from "../components/Card1";
 import { LeafIcon, LightningIcon } from "@phosphor-icons/react";
 import { XCircleIcon } from "lucide-react";
+import { useNavigate } from "react-router";
 
 export default function LandingPage() {
+  const navigate = useNavigate();
   return (
     <div>
       <div className="relative ">
@@ -22,7 +24,11 @@ export default function LandingPage() {
             sun-ripened pineapples in every drop.
           </p>
 
-          <button className="bg-[#FFD900] py-3 px-13.75 rounded-full font-semibold mt-6">
+          {/* Shop now button */}
+          <button
+            onClick={() => navigate("/product")}
+            className="bg-[#FFD900] py-3 px-13.75 rounded-full font-semibold mt-6"
+          >
             Shop Now
           </button>
         </div>
