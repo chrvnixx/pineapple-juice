@@ -4,6 +4,7 @@ import { ArrowLeft, StarIcon } from "lucide-react";
 import CheckoutButtons from "../components/CheckoutButtons";
 import { useCart } from "../components/CartContext";
 import { useNavigate } from "react-router";
+import toast from "react-hot-toast";
 
 export default function ProductPage() {
   const { quantity, addProduct, cart } = useCart();
@@ -17,7 +18,11 @@ export default function ProductPage() {
     price: 4.99,
   };
 
-  console.log(cart);
+  function handleClick(product) {
+    addProduct(product);
+    toast.success(`${product.name} has been added to your cart`);
+  }
+
   return (
     <div>
       <div className="relative">
@@ -48,7 +53,8 @@ export default function ProductPage() {
           <span className="text-[24px] font-semibold ">$4.99</span>
         </div>
 
-        <CheckoutButtons onClick={() => addProduct(product)} />
+        {/* checkout buttons */}
+        <CheckoutButtons onClick={() => handleClick(product)} />
       </div>
 
       <p className="mx-4 text-[14px] mt-6">

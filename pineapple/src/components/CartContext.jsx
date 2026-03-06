@@ -46,6 +46,10 @@ export function CartProvider({ children }) {
     });
   }
 
+  function removeAll() {
+    setCart([]);
+  }
+
   return (
     <CartContext.Provider
       value={{
@@ -56,6 +60,7 @@ export function CartProvider({ children }) {
         increaseQuantity,
         decreaseQuantity,
         total,
+        removeAll,
       }}
     >
       {children}

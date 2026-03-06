@@ -4,12 +4,14 @@ import "./index.css";
 import App from "./App.jsx";
 import { BrowserRouter } from "react-router";
 import { CartProvider } from "./components/CartContext.jsx";
+import { Toaster } from "react-hot-toast";
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
     <CartProvider>
       <BrowserRouter>
         <App />
+        <Toaster />
       </BrowserRouter>
     </CartProvider>
   </StrictMode>,

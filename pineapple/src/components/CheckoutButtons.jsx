@@ -9,6 +9,10 @@ export default function CheckoutButtons({ onClick }) {
       setQuantity(quantity - 1);
     }
   }
+
+  function handleClick() {
+    onClick;
+  }
   return (
     <div className="flex gap-4">
       <div className="flex bg-[#c4e2ff]/30 h-10 text-[18px] items-center rounded-xl mt-2 text-black/50">
