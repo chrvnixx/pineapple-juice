@@ -6,7 +6,8 @@ import ProductPage from "./pages/ProductPage";
 import CartModal from "./components/CartModal";
 import Cart from "./components/Cart";
 import { useState } from "react";
-import { CartProvider } from "./components/CartContext";
+
+import CheckoutPage from "./pages/CheckoutPage";
 
 function App() {
   const [open, setOpen] = useState(false);
@@ -21,6 +22,7 @@ function App() {
       <Routes>
         <Route path="/" element={<LandingPage />} />
         <Route path="/product" element={<ProductPage />} />
+        <Route path="/checkout" element={<CheckoutPage />} />
       </Routes>
     </div>
   );

@@ -36,7 +36,7 @@ export default function Cart({ onClose }) {
                   <img src={item.image} className="w-20 h-20" alt="" />
                   <div className="flex flex-col">
                     <span className="font-bold">{item.name} </span>
-                    <span className="opacity-50">${item.price} </span>
+                    <span className="opacity-50">₦{item.price} </span>
                   </div>
                 </div>
 
@@ -60,7 +60,7 @@ export default function Cart({ onClose }) {
 
               <div className="mt-8 flex justify-between">
                 <span className="text-[18px] opacity-50 ">Total</span>
-                <span>${(item.price * item.quantity).toFixed(2)}</span>
+                <span>₦{(item.price * item.quantity).toFixed(2)}</span>
               </div>
             </div>
           ))}

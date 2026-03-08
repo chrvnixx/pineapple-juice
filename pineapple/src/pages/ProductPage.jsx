@@ -12,10 +12,10 @@ export default function ProductPage() {
 
   const product = {
     id: 1,
-    name: "tapache",
+    name: "Pineapple Tapache",
     image: goldPineapple,
     quantity: quantity,
-    price: 4.99,
+    price: 2000,
   };
 
   function handleClick(product) {
@@ -35,22 +35,24 @@ export default function ProductPage() {
         </div>
       </div>
 
-      <div className="flex justify-between px-4 mt-6 ">
+      <div className="flex  px-4 mt-6 gap-12 ">
         <div className="text-[12px] text-[#ffd900] ">PREMIUM COLLECTION</div>
-        <div className="flex items-center gap-1">
+        <div className="flex items-center gap-1  ">
           <StarIcon size={10} weight="thin" color="#ffd900" />
-          <span className="text-[14px] ">4.9(124reviews)</span>
+          <span className="text-[14px] ">4.9 (124reviews)</span>
         </div>
       </div>
 
       <div>
         <h3 className="text-[30px] font-semibold ml-4 leading-9 ">
-          Golden Pineapple <br /> Nectar
+          Pineapple Tapache
         </h3>
       </div>
-      <div className="flex items-center gap-8 ">
+      <div className="flex items-center gap-4  mt-4">
         <div className="flex items-center gap-2 ml-4 mt-2">
-          <span className="text-[24px] font-semibold ">$4.99</span>
+          <span className="text-[20px] font-semibold ">
+            ₦{product.price.toLocaleString()}
+          </span>
         </div>
 
         {/* checkout buttons */}
