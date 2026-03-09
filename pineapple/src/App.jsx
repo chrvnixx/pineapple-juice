@@ -16,7 +16,7 @@ function App() {
       <Navbar setOpen={setOpen} />
 
       <CartModal open={open}>
-        <Cart onClose={() => setOpen(false)} />
+        <Cart onClose={() => setOpen(false)} setOpen={setOpen} />
       </CartModal>
 
       <Routes>

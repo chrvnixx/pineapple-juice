@@ -57,6 +57,7 @@ export function CartProvider({ children }) {
         quantity,
         setQuantity,
         cart,
+        setCart,
         increaseQuantity,
         decreaseQuantity,
         total,

@@ -1,6 +1,7 @@
 import { ShoppingBagIcon, XIcon } from "lucide-react";
 import React, { useEffect, useState } from "react";
 import { useCart } from "./CartContext";
+import { Link } from "react-router";
 
 export default function Cart({ onClose }) {
   const { cart, quantity, increaseQuantity, decreaseQuantity, removeAll } =
@@ -66,9 +67,15 @@ export default function Cart({ onClose }) {
           ))}
 
           {/* checkout button */}
-          <button className="bg-[#ffd900] px-5 py-2 rounded-xl mt-4 ">
-            Checkout
-          </button>
+
+          <Link to="/checkout" className="">
+            <button
+              onClick={onClose}
+              className="bg-[#ffd900] text-center px-5 py-2 rounded-xl mt-4 w-full "
+            >
+              Checkout
+            </button>
+          </Link>
         </div>
       )}
     </div>
