@@ -25,7 +25,7 @@ export default function ProductPage() {
 
   return (
     <div>
-      <div className="relative flex">
+      <div className="relative flex justify-center">
         <img src={goldPineapple} alt="" />
         <div
           onClick={() => navigate(-1)}
