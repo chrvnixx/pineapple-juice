@@ -1,4 +1,4 @@
-import { XIcon } from "@phosphor-icons/react";
+import { XIcon } from "lucide-react";
 import React from "react";
 import { Link } from "react-router";
 

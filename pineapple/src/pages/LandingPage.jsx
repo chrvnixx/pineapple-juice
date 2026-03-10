@@ -2,8 +2,7 @@ import React from "react";
 import HeroImage from "../assets/landing-page/Hero-image.png";
 import pineapple from "../assets/landing-page/pineapple.png";
 import Card1 from "../components/Card1";
-import { LeafIcon, LightningIcon } from "@phosphor-icons/react";
-import { XCircleIcon } from "lucide-react";
+import { LeafIcon, XCircleIcon, Zap } from "lucide-react";
 import { useNavigate } from "react-router";
 
 export default function LandingPage() {
@@ -51,7 +50,7 @@ export default function LandingPage() {
               desc="Sourced from sustainable sun-drenched farms."
             />
             <Card1
-              icon={LightningIcon}
+              icon={Zap}
               title="Vitamin C Boost"
               desc="Strengthen your immunity with every refreshing sip."
             />

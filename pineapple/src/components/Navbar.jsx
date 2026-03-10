@@ -1,5 +1,4 @@
-import { ShoppingCartIcon } from "@phosphor-icons/react";
-import { Menu } from "lucide-react";
+import { Menu, ShoppingCartIcon } from "lucide-react";
 import React from "react";
 import { useNavigate } from "react-router";
 

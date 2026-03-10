@@ -1,12 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useCart } from "../components/CartContext";
-import {
-  AlignRightIcon,
-  ArrowRightIcon,
-  BankIcon,
-  CopyIcon,
-  InfoIcon,
-} from "@phosphor-icons/react";
+import { ArrowRightIcon, CopyIcon, InfoIcon, Landmark } from "lucide-react";
 
 export default function CheckoutPage({ setOpenThanks }) {
   const { cart, setCart } = useCart();
@@ -113,7 +107,7 @@ export default function CheckoutPage({ setOpenThanks }) {
           <div className="mt-8">
             <div className="flex gap-2">
               <h2 className="text-[20px] font-bold ">Payment</h2>
-              <BankIcon size={32} weight="fill" color="#ffd900" />
+              <Landmark size={32} weight="fill" color="#ffd900" />
             </div>
 
             <div className="bg-[#ffd900]/5 border-2 border-[#ffd900]/30 p-5 mt-4 rounded-xl ">
@@ -133,7 +127,7 @@ export default function CheckoutPage({ setOpenThanks }) {
                     <span className="text-[16px] font-bold ">
                       Major Drinks Ltd
                     </span>
-                    <CopyIcon className="opacity-50" />
+                    <CopyIcon size={15} className="opacity-50" />
                   </div>
                 </div>
 
@@ -144,7 +138,7 @@ export default function CheckoutPage({ setOpenThanks }) {
                   </span>
                   <div className="flex justify-between">
                     <span className="text-[16px] font-bold ">1234567890</span>
-                    <CopyIcon className="opacity-50" />
+                    <CopyIcon size={15} className="opacity-50" />
                   </div>
                 </div>
 
