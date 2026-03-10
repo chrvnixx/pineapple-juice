@@ -1,6 +1,6 @@
 import { Route, Routes } from "react-router";
 import "./App.css";
-import Navbar from "./components/navbar";
+import Navbar from "./components/Navbar";
 import LandingPage from "./pages/LandingPage";
 import ProductPage from "./pages/ProductPage";
 import CartModal from "./components/CartModal";
