@@ -8,10 +8,12 @@ export default function Cart({ onClose }) {
     useCart();
 
   return (
-    <div className="relative flex flex-col bg-white w-90 max-h-[70%]  mx-4 overflow-auto p-4 rounded-xl ">
-      <XIcon onClick={onClose} className="fixed right-9" />
+    <div className=" flex flex-col bg-white w-90 max-h-[70%]  mx-4 overflow-auto p-4 rounded-xl ">
       {cart.length === 0 ? (
         <div className="flex flex-col justify-center items-center">
+          <div onClick={onClose}>
+            <XIcon className="fixed right-9" />
+          </div>
           <div className="bg-[#ffd900] w-20 h-20 rounded-full flex justify-center items-center">
             <ShoppingBagIcon size={40} />
           </div>
@@ -22,13 +24,16 @@ export default function Cart({ onClose }) {
       ) : (
         <div className="flex flex-col">
           {/* Remove all button */}
-          <div className="flex opacity-50 justify-between">
+          <div className="flex  justify-between">
             <span
               onClick={() => removeAll()}
-              className="hover:underline active:underline  "
+              className="hover:underline active:underline opacity-50  "
             >
               Remove all
             </span>
+            <div onClick={onClose}>
+              <XIcon className="fixed right-9" />
+            </div>
           </div>
           {cart.map((item) => (
             <div key={item.id} className="mt-8">

@@ -8,14 +8,14 @@ import {
   InfoIcon,
 } from "@phosphor-icons/react";
 
-export default function CheckoutPage() {
+export default function CheckoutPage({ setOpenThanks }) {
   const { cart, setCart } = useCart();
 
   const [total, setTotal] = useState(0);
 
   useEffect(() => {
     const subTotal = cart.reduce((sum, item) => {
-      return sum + item.price;
+      return sum + item.price * item.quantity;
     }, 0);
 
     setTotal(subTotal);
@@ -25,7 +25,10 @@ export default function CheckoutPage() {
 
   const grandTotal = shippingFee + total;
 
-  console.log(total);
+  function handleSubmit(e) {
+    e.preventDefault();
+    setOpenThanks(true);
+  }
 
   return (
     <div className="p-4">
@@ -77,7 +80,7 @@ export default function CheckoutPage() {
       {/* Coustomer form/details */}
       <div>
         <h2 className="text-[20px] font-bold mt-8 ">Customer Details</h2>
-        <form className="mt-4 flex flex-col gap-6">
+        <form onSubmit={handleSubmit} className="mt-4 flex flex-col gap-6">
           <div className="flex flex-col gap-2">
             <label className="text-[14px]">Full Name</label>
             <input

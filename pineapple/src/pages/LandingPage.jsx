@@ -68,8 +68,8 @@ export default function LandingPage() {
         className="bg-white flex flex-col  mt-26 mx-4.5 rounded-xl overflow-hidden border border-[#ffd900]/20 "
         style={{ boxShadow: "0 4px 6px rgba(0,0,0,0.2)" }}
       >
-        <div className="flex justify-center">
-          <img src={pineapple} alt="" />
+        <div className=" flex justify-center">
+          <img src={pineapple} alt="" className="w-full" />
         </div>
         <h3 className="text-[24px] font-bold mt-8 ml-2">Our Story</h3>
         <p className="text[16px] opacity-60 mt-4 w-78 ml-2 ">
@@ -78,9 +78,9 @@ export default function LandingPage() {
           dolorum, consequatur voluptates laudantium eveniet quas repellendus
           modi maxime.
         </p>
-        <button className="bg-[#ffd900] w-31 h-12 rounded-xl ml-2 drop-shadow-xl mt-6 mb-8">
+        {/* <button className="bg-[#ffd900] w-31 h-12 rounded-xl ml-2 drop-shadow-xl mt-6 mb-8">
           Learn More
-        </button>
+        </button> */}
       </div>
     </div>
   );
