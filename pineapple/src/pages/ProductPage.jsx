@@ -25,7 +25,7 @@ export default function ProductPage() {
 
   return (
     <div>
-      <div className="relative">
+      <div className="relative flex">
         <img src={goldPineapple} alt="" />
         <div
           onClick={() => navigate(-1)}
@@ -35,8 +35,8 @@ export default function ProductPage() {
         </div>
       </div>
 
-      <div className="flex  px-4 mt-6 gap-12 ">
-        <div className="text-[12px] text-[#ffd900] ">PREMIUM COLLECTION</div>
+      <div className="flex  px-4 mt-6 justify-between ">
+        <div className="text-[12px] text-[#ffd900] ">PREMIUM PACK</div>
         <div className="flex items-center gap-1  ">
           <StarIcon size={10} weight="thin" color="#ffd900" />
           <span className="text-[14px] ">4.9 (124reviews)</span>

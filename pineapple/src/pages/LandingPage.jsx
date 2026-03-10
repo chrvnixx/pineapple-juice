@@ -9,8 +9,8 @@ export default function LandingPage() {
   const navigate = useNavigate();
   return (
     <div>
-      <div className="relative ">
-        <div>
+      <div className="relative flex justify-center ">
+        <div className="">
           <img src={HeroImage} alt="" />
         </div>
         <div className="absolute flex flex-col items-center top-30 left-0 right-0 ">

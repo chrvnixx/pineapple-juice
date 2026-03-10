@@ -12,6 +12,7 @@ import ConfirmationModal from "./components/ConfirmationModal";
 import OrderConfirmed from "./components/OrderConfirmed";
 import MenuModal from "./components/MenuModal";
 import Menu from "./components/Menu";
+import ScrollToTop from "./components/ScrollToTop";
 
 function App() {
   const [open, setOpen] = useState(false);
@@ -27,6 +28,8 @@ function App() {
       <ConfirmationModal openThanks={openThanks}>
         <OrderConfirmed onClose={() => setOpenThanks(false)} />
       </ConfirmationModal>
+
+      <ScrollToTop />
 
       <MenuModal openMenu={openMenu}>
         <Menu onClose={() => setOpenMenu(false)} />
