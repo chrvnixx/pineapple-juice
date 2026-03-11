@@ -15,13 +15,25 @@ export default function CheckoutPage({ setOpenThanks }) {
     setTotal(subTotal);
   }, [cart]);
 
-  const shippingFee = (total * 10) / 100;
+  const delivery = (total * 10) / 100;
 
-  const grandTotal = shippingFee + total;
+  const grandTotal = delivery + total;
 
   function handleSubmit(e) {
     e.preventDefault();
     setOpenThanks(true);
+  }
+
+  function handleCopyName() {
+    const name = "Major Drinks Ltd";
+
+    navigator.clipboard.writeText(name);
+  }
+
+  function handleCopyNumber() {
+    const number = 1234567890;
+
+    navigator.clipboard.writeText(number);
   }
 
   return (
@@ -60,12 +72,12 @@ export default function CheckoutPage({ setOpenThanks }) {
             <span> ₦{total}</span>
           </div>
           <div className="flex justify-between">
-            <span className="text-[14px] opacity-50 ">Shipping</span>
-            <span> ₦{shippingFee}</span>
+            <span className="text-[14px] opacity-50 ">Delivery</span>
+            <span> ₦{delivery}</span>
           </div>
-
+          <hr className="border opacity-10" />
           <div className="flex justify-between">
-            <span className="text-[18px] opacity-50 font-bold ">Total</span>
+            <span className="text-[18px]  font-bold ">Total</span>
             <span className="text-[18px] text-[#ffd900] "> ₦{grandTotal}</span>
           </div>
         </div>
@@ -127,7 +139,11 @@ export default function CheckoutPage({ setOpenThanks }) {
                     <span className="text-[16px] font-bold ">
                       Major Drinks Ltd
                     </span>
-                    <CopyIcon size={15} className="opacity-50" />
+                    <CopyIcon
+                      onClick={handleCopyName}
+                      size={15}
+                      className="opacity-50 active:opacity-10"
+                    />
                   </div>
                 </div>
 
@@ -138,7 +154,11 @@ export default function CheckoutPage({ setOpenThanks }) {
                   </span>
                   <div className="flex justify-between">
                     <span className="text-[16px] font-bold ">1234567890</span>
-                    <CopyIcon size={15} className="opacity-50" />
+                    <CopyIcon
+                      onClick={handleCopyNumber}
+                      size={15}
+                      className="opacity-50 active:opacity-10"
+                    />
                   </div>
                 </div>
 
